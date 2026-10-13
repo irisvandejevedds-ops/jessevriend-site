@@ -3,19 +3,11 @@
   "tagline": "",
   "about": "",
   "email": "",
-  "public": false,
   "elsewhere": [
-    {
-      "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/jesse-vriend-4b2580245/"
-    },
     {
       "label": "beingnbecoming.org",
       "url": "https://beingnbecoming.org/"
-    },
-    {
-      "label": "Being and Becoming on Substack",
-      "url": "https://beingnbecoming.substack.com/"
     }
-  ]
+  ],
+  "public": false
 }
