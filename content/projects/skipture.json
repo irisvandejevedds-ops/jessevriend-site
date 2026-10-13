@@ -1,0 +1,11 @@
+{
+  "title": "Skipture",
+  "order": 3,
+  "summary": "Shared rooms for sprite and texture libraries, with a single-pixel editor and a running count of how much has been redrawn by hand. Type DEMO as the room key to look around.",
+  "links": [
+    {
+      "label": "Open Skipture",
+      "url": "https://skipture.jessevriend.com/"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "jessevriend-site",
+  "compatibility_date": "2026-09-01",
+  // static files only: the page and the editor at /admin, built by build.py
+  "assets": { "directory": "./dist", "html_handling": "auto-trailing-slash", "not_found_handling": "404-page" },
+  // draft address while the content is being filled in; switch to the main domain when ready
+  "routes": [{ "pattern": "draft.jessevriend.com", "custom_domain": true }],
+  "observability": { "enabled": false }
+}

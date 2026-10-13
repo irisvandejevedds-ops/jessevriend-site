@@ -1,0 +1,113 @@
+# Sveltia CMS (a Decap-compatible editor). Edits are saved as commits to this repository; a push to main rebuilds and deploys the site.
+backend:
+  name: github
+  repo: irisvandejevedds-ops/jessevriend-site
+  branch: main
+
+site_url: https://draft.jessevriend.com
+display_url: https://draft.jessevriend.com
+media_folder: static/uploads
+public_folder: /uploads
+publish_mode: simple
+locale: en
+
+collections:
+  - name: site
+    label: Home page
+    files:
+      - name: site
+        label: Name, about and links
+        file: content/site.json
+        format: json
+        fields:
+          - { name: name, label: Your name, widget: string }
+          - { name: tagline, label: One line under your name, widget: string, required: false, hint: "Leave blank to hide it." }
+          - { name: about, label: About, widget: markdown, required: false, hint: "Leave blank to hide the About section." }
+          - { name: email, label: Email to show, widget: string, required: false, hint: "Leave blank to show none." }
+          - name: elsewhere
+            label: Elsewhere (links at the bottom)
+            widget: list
+            required: false
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: Link, widget: string }
+          - { name: public, label: Let search engines find this site, widget: boolean, default: false, hint: "Off keeps the site out of search results while you are working on it." }
+      - name: bb
+        label: Being and Becoming section
+        file: content/bb.json
+        format: json
+        fields:
+          - { name: title, label: Title, widget: string }
+          - { name: url, label: Link, widget: string }
+          - { name: place, label: Small line under the title, widget: string, required: false }
+          - { name: description, label: Description, widget: markdown }
+          - { name: role, label: Your role there, widget: string, required: false, hint: "One sentence. Leave blank to hide it." }
+          - name: links
+            label: Links
+            widget: list
+            required: false
+            fields:
+              - { name: label, label: Label, widget: string }
+              - { name: url, label: Link, widget: string }
+          - name: events
+            label: What they run
+            widget: list
+            required: false
+            fields:
+              - { name: title, label: Name, widget: string }
+              - { name: text, label: Short description, widget: string }
+
+  - name: projects
+    label: Apps and projects
+    label_singular: project
+    folder: content/projects
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [order, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: order, label: Order (1 comes first), widget: number, value_type: int, default: 10 }
+      - { name: summary, label: What it is, widget: text }
+      - name: links
+        label: Links
+        widget: list
+        required: false
+        fields:
+          - { name: label, label: Label, widget: string }
+          - { name: url, label: Link, widget: string }
+
+  - name: pagers
+    label: One-pagers
+    label_singular: one-pager
+    folder: content/pagers
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [order, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: order, label: Order (1 comes first), widget: number, value_type: int, default: 10 }
+      - { name: blurb, label: A line about it, widget: text, required: false }
+      - { name: file, label: The PDF, widget: file, media_folder: /static/pagers, public_folder: /pagers, required: false }
+      - { name: url, label: Or a link instead of a file, widget: string, required: false }
+
+  - name: writing
+    label: Writing
+    label_singular: piece
+    folder: content/writing
+    extension: json
+    format: json
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [date, title]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, picker_utc: true }
+      - { name: summary, label: A line about it, widget: text, required: false }
+      - { name: url, label: Link, widget: string }

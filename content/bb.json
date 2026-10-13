@@ -1,0 +1,31 @@
+{
+  "title": "Being and Becoming: A Community for the Curious",
+  "url": "https://beingnbecoming.org/",
+  "place": "Toronto · non-profit",
+  "description": "A Toronto non-profit that builds a community around the philosophical exploration of ideas, questions and experiences, so that people can live more intentional, connected and meaningful lives. Its leadership, guests and audience come from many disciplines: artists, teachers, writers and philosophers.",
+  "role": "",
+  "links": [
+    {
+      "label": "Curiosity Café",
+      "url": "https://beingnbecoming.org/curiosity-cafes/"
+    },
+    {
+      "label": "Civic Café",
+      "url": "https://beingnbecoming.org/civic-cafe/"
+    },
+    {
+      "label": "Newsletter",
+      "url": "https://beingnbecoming.substack.com/"
+    }
+  ],
+  "events": [
+    {
+      "title": "Curiosity Café",
+      "text": "every two weeks, a chosen topic explored together"
+    },
+    {
+      "title": "Civic Café",
+      "text": "a civic engagement pilot series from Fall 2026, supported by an Ontario Trillium Foundation Seed Grant"
+    }
+  ]
+}

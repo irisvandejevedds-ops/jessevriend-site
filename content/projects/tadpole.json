@@ -1,0 +1,15 @@
+{
+  "title": "Tadpole",
+  "order": 2,
+  "summary": "A food and symptom diary with a frog that grows up while you keep notes. The diary lives on your own phone and works with no internet.",
+  "links": [
+    {
+      "label": "Try the demo",
+      "url": "https://tadpole.jessevriend.com/demo/"
+    },
+    {
+      "label": "Download",
+      "url": "https://tadpole.jessevriend.com/"
+    }
+  ]
+}

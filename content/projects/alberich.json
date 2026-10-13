@@ -1,0 +1,15 @@
+{
+  "title": "Alberich",
+  "order": 1,
+  "summary": "A spending pet. You split what you can spend into pouches (coffee, takeout, a night out) and a dwarf who guards the gold stays happy while you spend at a steady pace. Android app with a home-screen widget; the computer side reads bank statements.",
+  "links": [
+    {
+      "label": "Try the demo",
+      "url": "https://alberich.jessevriend.com/demo/"
+    },
+    {
+      "label": "Download",
+      "url": "https://alberich.jessevriend.com/"
+    }
+  ]
+}
