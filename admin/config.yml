@@ -3,6 +3,8 @@ backend:
   name: github
   repo: irisvandejevedds-ops/jessevriend-site
   branch: main
+  # "Sign In with GitHub" would need an OAuth server. This points it at a page that says to use the access token instead (see static/auth).
+  base_url: https://draft.jessevriend.com
 
 site_url: https://draft.jessevriend.com
 display_url: https://draft.jessevriend.com

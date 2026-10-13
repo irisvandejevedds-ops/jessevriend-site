@@ -88,6 +88,12 @@ class Render(unittest.TestCase):
         html, _ = build.render()
         self.assertIn("Fine", html)
 
+    def test_the_github_button_lands_on_a_page_that_exists(self):
+        cfg = (ROOT / "admin/config.yml").read_text()
+        self.assertIn("base_url: https://", cfg)
+        page = (ROOT / "static/auth/index.html").read_text()
+        self.assertIn("Sign In Using Access Token", page)
+
     def test_cms_config_points_at_real_content_files(self):
         cfg = (ROOT / "admin/config.yml").read_text()
         for f in ("content/site.json", "content/bb.json", "content/projects", "content/pagers", "content/writing"):
